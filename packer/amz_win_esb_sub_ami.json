@@ -59,6 +59,9 @@
       "inline": [
         "\"%ProgramFiles%\"\\Amazon\\Ec2ConfigService\\ec2config.exe -sysprep"
       ]
+    },
+    {
+      "type": "windows-restart"
     }
   ],
   "variables": {
