@@ -61,7 +61,7 @@
     "chef_run_list":"",
     "chef_version":"latest",
     "ami_regions":"",
-    "container_version":"",
+    "container_version":"{{ env `container_version` }}",
     "ami_users":"",
     "packer_role":"packer",
     "packer_instance_profile":"packer",
