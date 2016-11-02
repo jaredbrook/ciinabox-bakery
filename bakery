@@ -90,6 +90,11 @@ if [[ ! x${AMI_REGIONS} == "x" ]]; then
   log info "using ami regions ${AMI_REGIONS}"
 fi
 
+if [[ ! x${CONTAINER_VERSION} == "x" ]]; then
+  CLI_OPTS="${CLI_OPTS} -var container_version=${CONTAINER_VERSION}"
+  log info "using container version ${CONTAINER_VERSION}"
+fi
+
 echo "{\"${CLIENT}\":{\"version\":\"${BUILD_NUMBER}\",\"build_id\":\"${7}\",\"build_sha\":\"${8}\"}}" > build/override.json
 
 /opt/packer/packer build -debug -machine-readable -var-file=${PACKER_BUILD_PARAMS} ${CLI_OPTS} ${PACKER_BUILD_TMPL} | tee build/build.log
