@@ -27,8 +27,7 @@
   }],
   "provisioners": [
     {
-      "environment_vars": [ "client={{user `client`}}" ],
-      "environment_vars": [ "container_version={{user `container_version`}}" ],
+      "environment_vars": [ "client={{user `client`}}","container_version={{user `container_version`}}" ],
       "type": "shell",
       "inline": [
        "sudo yum -y install openssh-server",
