@@ -7,7 +7,6 @@
     "iam_instance_profile":"{{ user `packer_instance_profile`}}",
     "ami_name": "{{ user `client`}}-{{ user `ami_name` }}-{{ user `build_no` }}",
     "ami_regions": "{{ user `ami_regions`}}",
-    "container_version": "{{ user `container_version`}}",
     "ami_users": "{{ user `ami_users`}}",
     "access_key": "{{ user `access_key` }}",
     "secret_key": "{{ user `secret_key` }}",
